@@ -1,0 +1,7 @@
+{
+    "shortname": "mail",
+    "name": "Mail",
+    "description": "Mail Module",
+    "version": "0.0.1",
+    "dependencies": ""
+}
