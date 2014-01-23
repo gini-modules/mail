@@ -3,5 +3,7 @@
     "name": "Mail",
     "description": "Mail Module",
     "version": "0.0.1",
-    "dependencies": ""
+    "dependencies": {
+      "gini": ">=0.2.1"
+    }
 }

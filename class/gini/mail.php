@@ -116,7 +116,7 @@ namespace Gini {
             $sender = $this->_sender;
             $success = $success ? 'OK' : 'ERR';
 
-            _LOG("[{$success}] {$sender} => {$recipients}: {$subject}", 'mail');
+            Logger::of('mail')->error("[{$success}] {$sender} => {$recipients}: {$subject}");
             $this->clear();
             return $success;        
         }
