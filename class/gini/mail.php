@@ -27,7 +27,7 @@ namespace Gini {
     
         function __construct($sender=null){
             if(is_null($sender)){
-                $sender = (object)_CONF('system.postmaster');
+                $sender = (object)\Gini\Config::get('system.postmaster');
             }
 
             $this->from($sender->email, $sender->name);
@@ -97,7 +97,7 @@ namespace Gini {
         function send()
         {        
             $success = false;
-            if (_CONF('debug.email')) {
+            if (\Gini\Config::get('debug.email')) {
                 $success = true;
             }
             else {        
