@@ -1,5 +1,5 @@
 {
-    "shortname": "mail",
+    "id": "mail",
     "name": "Mail",
     "description": "Mail Module",
     "version": "0.0.1",
