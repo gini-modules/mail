@@ -149,7 +149,7 @@ class Mail
     {
         if (!$this->_has_attachment) return null;
 
-        foreach ($this->_attachment as $path => $file) {
+        foreach ($this->_attachments as $path => $file) {
             $attach_data[] = sprintf('--%s', $this->_boundary);
             $attach_data[] = sprintf('Content-Type: %s; name="%s"',  File::mine_type($file) ? : 'application/octet-stream', $file);
             $attach_data[] = 'Content-Transfer-Encoding: base64';
