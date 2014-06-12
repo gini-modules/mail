@@ -2,8 +2,8 @@
     "id": "mail",
     "name": "Mail",
     "description": "Mail Module",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "dependencies": {
-      "gini": ">=0.2.1"
+        "gini": ">=0.2.1"
     }
 }
