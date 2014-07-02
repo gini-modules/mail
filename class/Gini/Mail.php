@@ -269,7 +269,7 @@ class Mail
     //创建Boundary
     private function _makeBoundary()
     {
-        $this->_boundary = $this->_boundary ? : 'GENEE-'.md5(Date::time());
+        $this->_boundary = $this->_boundary ? : 'GENEE-'.md5(time());
     }
 
     private function _getMessageId()
