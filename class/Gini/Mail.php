@@ -25,7 +25,7 @@ class Mail
     private $_header;
     private $_boundary;
 
-    public function __construct($sender = false)
+    public function __construct($sender = null)
     {
         if (is_null($sender)) {
             $sender = (object) Config::get('system.postmaster');
