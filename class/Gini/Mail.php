@@ -151,10 +151,9 @@ class Mail
 
         foreach ($this->_attachments as $path => $file) {
             $attach_data[] = sprintf('--%s', $this->_boundary);
+            $attach_data[] = sprintf('Content-Disposition: attachment; filename="%s"', $file);
             $attach_data[] = sprintf('Content-Type: %s; name="%s"',  File::mimeType($file) ? : 'application/octet-stream', $file);
             $attach_data[] = 'Content-Transfer-Encoding: base64';
-            $attach_data[] = 'Content-Disposition: attachment';
-            $attach_data[] = sprintf('filename="%s"', $file);
             $attach_data[] = null; //需要占位，这样mail发送才能正常进行解析附件
             $attach_data[] = chunk_split(@base64_encode(@file_get_contents($path)));
             $attach_data[] = null;
